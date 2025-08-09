@@ -8,7 +8,10 @@ Hand's on : UI에서 직접 대시보드와 패널 만들어보며 익히기
 ./docker-compose up -d
 
 # boot-sample(Spring Boot, Kotlin, Gradle 기반) 앱 실행 (스크립트)
-./run-boot-sample.sh
+./run-boot-sample.sh start
+
+# 종료
+./run-boot-sample.sh stop
 ```
 
 > 스크립트는 boot-sample 앱을 빌드 후 백그라운드로 실행하며, 로그는 `boot-sample.log` 파일에 저장됩니다.

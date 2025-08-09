@@ -38,6 +38,8 @@ out/
 
 ### Kotlin ###
 .kotlin
+boot-sample.log
+boot-sample.pid
 
 ### Mac OS ###
 .DS_Store
