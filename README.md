@@ -42,6 +42,7 @@
 
 ```
 sre-ramos/
+├── boot-sample/   # 공통으로 사용할 Spring Boot 예제 프로젝트
 ├── grafana-dashboard/
 │   ├── docker-compose.yml
 │   └── ...
