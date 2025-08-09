@@ -21,7 +21,7 @@ Hand's on : UI에서 직접 대시보드와 패널 만들어보며 익히기
 
 Prometheus Targets: `http://localhost:9090/targets`에서 cadvisor, node-exporter, prometheus UP 확인
 
-<img width="1912" height="841" alt="Image" src="https://github.com/user-attachments/assets/a4d82e06-e735-4752-ab1f-0f40e40398c0" />
+<img width="1908" height="793" alt="Image" src="https://github.com/user-attachments/assets/31fdb12d-7dcc-4caf-a61b-2aebf95d7510" />
 
 
 ## 1) 대시보드 & 변수 만들기 (Templating)
