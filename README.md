@@ -4,7 +4,8 @@
 ## 폴더별 주제
 - `grafana-dashboard/` : Grafana Dashboard 테스트 환경
 
-각 폴더는 독립적으로 실행할 수 있으며, 필요한 Docker 환경이 포함되어 있습니다.
+각 폴더는 독립적으로 실행할 수 있으며, 필요한 Docker 환경이 포함되어 있습니다.  
+**주의⚠️ : 주제는 라모스 맘대로 추가될 예정**
 
 ---
 
@@ -15,7 +16,7 @@
 
 2. **레포지토리 클론**
 	```bash
-	git clone https://github.com/your-org/sre-ramos.git
+	git clone https://github.com/Ramos-Labs/sre-ramos.git
 	cd sre-ramos
 	```
 
@@ -44,7 +45,7 @@ sre-ramos/
 ├── grafana-dashboard/
 │   ├── docker-compose.yml
 │   └── ...
-├── metric-collector/
+├── (추가되는 예제프로젝트)/
 │   ├── docker-compose.yml
 │   └── ...
 └── README.md

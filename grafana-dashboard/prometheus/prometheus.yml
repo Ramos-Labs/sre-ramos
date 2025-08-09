@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  # Prometheus 자체
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['prometheus:9090']
+
+  # cAdvisor (컨테이너/도커 메트릭)
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+
+  # Node Exporter (호스트 메트릭)
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']
+
+  # (Optional) Spring Boot Actuator Prometheus
+  #  - Docker Desktop(Mac/Windows)면 host.docker.internal 사용
+  #  - Linux면 호스트 IP로 바꿔 써야 함
+  - job_name: 'spring-boot'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['host.docker.internal:8080']
