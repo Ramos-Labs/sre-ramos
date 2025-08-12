@@ -1,6 +1,8 @@
 # Grafana Dashboard Hand's on
 Hand's on : UI에서 직접 대시보드와 패널 만들어보며 익히기
 
+<img width="1910" height="934" alt="Image" src="https://github.com/user-attachments/assets/8c3bc404-bc8f-448b-be7c-1432c0121d82" />
+
 - 참고 : [Grafana Documentation](https://grafana.com/docs/grafana/latest/?utm_source=grafana_gettingstarted)
 
 ## 사전 준비
