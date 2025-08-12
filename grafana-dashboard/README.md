@@ -61,9 +61,11 @@ node_uname_info{job="node"}
 - Panel Type : Table 또는 Bar Chart
 - Display : Top 10 containers
 
+<img width="1607" height="815" alt="Image" src="https://github.com/user-attachments/assets/369652d3-fa8b-476e-b191-962d9a22de2e" />
+
 ```promql
 topk(10, 
-  rate(container_cpu_usage_seconds_total{name!=""}[5m]) * 100
+  rate(container_cpu_usage_seconds_total{id!=""}[5m]) * 100
 )
 ```
 
@@ -73,6 +75,8 @@ topk(10,
 - Title : Node Memory Usage (%)
 - Unit : Percent (0-100)
 - Thresholds : 90%, 80%
+
+<img width="1597" height="764" alt="Image" src="https://github.com/user-attachments/assets/c1efcc06-3b76-443c-918f-5204d8355b67" />
 
 ```promql
 (
@@ -92,19 +96,23 @@ topk(10,
 - Panel Type : Bar Chart 또는 State Timeline
 - Time Range : Last 24 hours
 
+<img width="1607" height="807" alt="Image" src="https://github.com/user-attachments/assets/2283bbeb-ebf2-48fa-b071-68eddbedd1de" />
+
 ```promql
-increase(container_start_time_seconds{name!=""}[24h])
+increase(container_start_time_seconds{id!=""}[24h])
 ```
 
 **대안 쿼리** (재시작 횟수 카운트):
 ```promql
-changes(container_start_time_seconds{name!=""}[24h])
+changes(container_start_time_seconds{id!=""}[24h])
 ```
 
 ## 6) 패널#5 — 네트워크 I/O (노드)
 - Title : Node Network I/O (bytes/sec)
 - Unit : bytes/sec
 - Panel Type : Time series (2개 시리즈: Receive, Transmit)
+
+<img width="1597" height="846" alt="Image" src="https://github.com/user-attachments/assets/bcdb09c3-375b-4818-a15a-a13f9f4e18c0" />
 
 **수신 트래픽**:
 ```promql
@@ -121,6 +129,8 @@ rate(node_network_transmit_bytes_total{device!="lo"}[5m])
 - Unit : Percent (0-100)
 - Thresholds : 90%, 80%
 
+<img width="1612" height="796" alt="Image" src="https://github.com/user-attachments/assets/bb233af9-da03-4785-81a6-b1d3df874dcb" />
+
 ```promql
 (
   (node_filesystem_size_bytes{fstype!="tmpfs"} - node_filesystem_avail_bytes{fstype!="tmpfs"}) / 
@@ -133,6 +143,8 @@ rate(node_network_transmit_bytes_total{device!="lo"}[5m])
 - Title : JVM Memory Usage (MB)
 - Unit : bytes
 
+<img width="1606" height="805" alt="Image" src="https://github.com/user-attachments/assets/049e383c-6a25-4849-9f3c-2264dd724fcf" />
+
 ```promql
 jvm_memory_used_bytes{area="heap"}
 ```
@@ -141,6 +153,8 @@ jvm_memory_used_bytes{area="heap"}
 - Title : JVM GC Collections/sec
 - Unit : ops
 
+<img width="1615" height="807" alt="Image" src="https://github.com/user-attachments/assets/1039026e-ebe7-4aed-a3a2-bceface1deab" />
+
 ```promql
 rate(jvm_gc_pause_seconds_count[5m])
 ```
@@ -148,6 +162,8 @@ rate(jvm_gc_pause_seconds_count[5m])
 ### HTTP 요청 비율
 - Title : HTTP Requests/sec
 - Unit : reqps
+
+<img width="1601" height="793" alt="Image" src="https://github.com/user-attachments/assets/79b41904-daa7-4f4e-af05-2074f2828c58" />
 
 ```promql
 rate(http_server_requests_seconds_count[5m])
